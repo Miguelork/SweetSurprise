@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "sweetsurprise"
+    }
+  },
+  "defaultProject": "sweetsurprise",
+  "cli": {
+    "analytics": false
+  }
 }
