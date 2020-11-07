@@ -1,0 +1,38 @@
+<div class="modal-dialog letra">
+    <div class="modal-content">
+        <div class="modal-header bg-pink">
+            <h3 class="modal-title">Agregar Producto</h3>
+            <button type="button" class="btn btn-cancel" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+            <form class="form">
+                <input type="text" class="form-control" placeholder="Nombre de Producto" required>
+                <br>
+                <input type="text" class="form-control" placeholder="Categoria" required>
+                <br>
+                <textarea class="form-control" placeholder="Descripción" rows="3" required></textarea>
+                <br>
+                <input type="number" class="form-control" min="0.1" placeholder="Precio" required>
+                <br>
+                <input type="number" class="form-control" min="100" placeholder="Stock" required>
+                <br>
+                <input type="text" class="form-control" placeholder="Fabricante" required>
+                <br>
+                <p class="tcenter"> Imagen Principal</p>
+                <input type="file" class="form-control" placeholder="Imagen Principal" required>
+                <br>
+                <p class="tcenter"> Imagen Secundaria</p>
+                <input type="file" class="form-control" placeholder="Imagen Secundaria" required>
+                <br>
+                <p class="tcenter"> Imagen Terciaria</p>
+                <input type="file" class="form-control" placeholder="Imagen Terciaria" required>
+                <br>
+            </form>
+        </div>
+        <div class="modal-footer bg-pink">
+            <button type="button" class="btn btn-cancel" data-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-acept">Agregar</button>
+        </div>
+    </div>
+</div>

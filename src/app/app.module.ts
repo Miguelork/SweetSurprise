@@ -13,6 +13,11 @@ import { ListcardproductComponent } from './components/listcardproduct/listcardp
 import { LoginComponent } from './pages/login/login.component';
 import { LoginformComponent } from './components/loginform/loginform.component';
 import { RegisterformComponent } from './components/registerform/registerform.component';
+import { AdministradorComponent } from './pages/administrador/administrador.component';
+import { AdmlistproductComponent } from './components/admlistproduct/admlistproduct.component';
+import { AdmlistuserComponent } from './components/admlistuser/admlistuser.component';
+import { AdminfouserComponent } from './components/adminfouser/adminfouser.component';
+import { AdminfoproductComponent } from './components/adminfoproduct/adminfoproduct.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +31,12 @@ import { RegisterformComponent } from './components/registerform/registerform.co
     ListcardproductComponent,
     LoginComponent,
     LoginformComponent,
-    RegisterformComponent
+    RegisterformComponent,
+    AdministradorComponent,
+    AdmlistproductComponent,
+    AdmlistuserComponent,
+    AdminfouserComponent,
+    AdminfoproductComponent
   ],
   imports: [
     BrowserModule,
