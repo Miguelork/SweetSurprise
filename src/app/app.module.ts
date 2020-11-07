@@ -7,6 +7,9 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { HomecarruselComponent } from './components/homecarrusel/homecarrusel.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HomejumbComponent } from './components/homejumb/homejumb.component';
+import { ProductcardComponent } from './components/productcard/productcard.component';
+import { TiendaComponent } from './pages/tienda/tienda.component';
+import { ListcardproductComponent } from './components/listcardproduct/listcardproduct.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { HomejumbComponent } from './components/homejumb/homejumb.component';
     NavbarComponent,
     HomecarruselComponent,
     HomeComponent,
-    HomejumbComponent
+    HomejumbComponent,
+    ProductcardComponent,
+    TiendaComponent,
+    ListcardproductComponent
   ],
   imports: [
     BrowserModule,
