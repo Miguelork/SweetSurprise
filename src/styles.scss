@@ -28,8 +28,20 @@ main{
     color: whitesmoke;
     border: 2px solid whitesmoke;
     background-color: #cb3234;
+    
 }
 .btn-reg{
     color:whitesmoke;
     border: 2px solid whitesmoke;
+    background-color: #ed1544;
 }
+.btn-edit{
+    color:whitesmoke;
+    border: 2px solid whitesmoke;
+    background-color: #e9bd15;
+}
+.table-pink,.table-pink>td,.table-pink>th{
+    background-color: #ed1544}
+    .table-pink thead{color:whitesmoke;background-color:#ed1544}
+    .table-pink tbody{color: whitesmoke;;background-color:#f1799b}
+    .table-hover:hover>td,.table-hover:hover>tbody{background-color:#ed1544}
