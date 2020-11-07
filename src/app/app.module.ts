@@ -10,6 +10,9 @@ import { HomejumbComponent } from './components/homejumb/homejumb.component';
 import { ProductcardComponent } from './components/productcard/productcard.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { ListcardproductComponent } from './components/listcardproduct/listcardproduct.component';
+import { LoginComponent } from './pages/login/login.component';
+import { LoginformComponent } from './components/loginform/loginform.component';
+import { RegisterformComponent } from './components/registerform/registerform.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { ListcardproductComponent } from './components/listcardproduct/listcardp
     HomejumbComponent,
     ProductcardComponent,
     TiendaComponent,
-    ListcardproductComponent
+    ListcardproductComponent,
+    LoginComponent,
+    LoginformComponent,
+    RegisterformComponent
   ],
   imports: [
     BrowserModule,
