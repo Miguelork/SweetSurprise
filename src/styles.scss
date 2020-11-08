@@ -22,26 +22,79 @@ main{
 .btn-acept{
     color: whitesmoke;
     border: 2px solid whitesmoke;
-    background-color: #008f39;
+    background-color: #08bb3d;
+    &:hover{
+        background-color: whitesmoke;
+        color:#08bb3d;  
+        border: 2px solid #08bb3d; 
+    }
+    &:active{
+        background-color:#08bb3d;
+        color: #333333;
+        border: 2px solid #333333; 
+    }
 }
 .btn-cancel{
     color: whitesmoke;
     border: 2px solid whitesmoke;
-    background-color: #cb3234;
+    background-color: #c4090c;
+    &:hover{
+        background-color: whitesmoke;
+        color:#c4090c;  
+        border: 2px solid #c4090c; 
+    }
+    &:active{
+        background-color: #c4090c;
+        color: #333333;
+        border: 2px solid #333333; 
+    }
     
 }
 .btn-reg{
     color:whitesmoke;
     border: 2px solid whitesmoke;
     background-color: #ed1544;
+    &:hover{
+        background-color: whitesmoke;
+        color:#ed1544;  
+        border: 2px solid #ed1544; 
+    }
+    &:active{
+        background-color:#ed1544;
+        color: #333333;
+        border: 2px solid #333333; 
+    }
 }
 .btn-edit{
     color:whitesmoke;
     border: 2px solid whitesmoke;
     background-color: #e9bd15;
+    &:hover{
+        background-color: whitesmoke;
+        color:#e9bd15;  
+        border: 2px solid #e9bd15; 
+    }
+    &:active{
+        background-color:#e9bd15;
+        color: #333333;
+        border: 2px solid #333333; 
+    }
 }
-.table-pink,.table-pink>td,.table-pink>th{
-    background-color: #ed1544}
-    .table-pink thead{color:whitesmoke;background-color:#ed1544}
-    .table-pink tbody{color: whitesmoke;;background-color:#f1799b}
-    .table-hover:hover>td,.table-hover:hover>tbody{background-color:#ed1544}
+.table-pink{
+    thead{
+        color:whitesmoke;
+        background-color:#ed1544
+    }
+    tbody{
+        color:whitesmoke;
+        background-color:#e9537d;
+        &:hover{
+            background-color:#ed1544;
+            color: white;   
+        }
+        &:active{
+            background-color:#ed1544;
+            color: #f5bacb;
+        }
+    }
+}
