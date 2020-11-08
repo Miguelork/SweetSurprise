@@ -1,0 +1,10 @@
+.boost-pink{
+    background-color: whitesmoke;
+    color:#ed1544;  
+    border: 2px solid #ed1544; 
+    &:hover{
+        color:whitesmoke;
+        border: 2px solid whitesmoke;
+        background-color: #ed1544;
+    }
+}

@@ -23,6 +23,8 @@ import { ConocetarjetComponent } from './components/conocetarjet/conocetarjet.co
 import { ContactanosComponent } from './pages/contactanos/contactanos.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { PerfilformComponent } from './components/perfilform/perfilform.component';
+import { ProductbusqComponent } from './components/productbusq/productbusq.component';
+import { PerfildeseoComponent } from './components/perfildeseo/perfildeseo.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +48,9 @@ import { PerfilformComponent } from './components/perfilform/perfilform.componen
     ConocetarjetComponent,
     ContactanosComponent,
     PerfilComponent,
-    PerfilformComponent
+    PerfilformComponent,
+    ProductbusqComponent,
+    PerfildeseoComponent
   ],
   imports: [
     BrowserModule,
