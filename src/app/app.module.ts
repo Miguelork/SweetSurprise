@@ -18,6 +18,11 @@ import { AdmlistproductComponent } from './components/admlistproduct/admlistprod
 import { AdmlistuserComponent } from './components/admlistuser/admlistuser.component';
 import { AdminfouserComponent } from './components/adminfouser/adminfouser.component';
 import { AdminfoproductComponent } from './components/adminfoproduct/adminfoproduct.component';
+import { ConocenosComponent } from './pages/conocenos/conocenos.component';
+import { ConocetarjetComponent } from './components/conocetarjet/conocetarjet.component';
+import { ContactanosComponent } from './pages/contactanos/contactanos.component';
+import { PerfilComponent } from './pages/perfil/perfil.component';
+import { PerfilformComponent } from './components/perfilform/perfilform.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +41,12 @@ import { AdminfoproductComponent } from './components/adminfoproduct/adminfoprod
     AdmlistproductComponent,
     AdmlistuserComponent,
     AdminfouserComponent,
-    AdminfoproductComponent
+    AdminfoproductComponent,
+    ConocenosComponent,
+    ConocetarjetComponent,
+    ContactanosComponent,
+    PerfilComponent,
+    PerfilformComponent
   ],
   imports: [
     BrowserModule,
