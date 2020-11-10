@@ -1,13 +1,10 @@
 <div class="container letra card-green">
-    <div class="row" *ngFor="let infoMiembro of infoMiembros; index as i">
-        <div class="col-md-3">
-            <img src="../../../assets/images/instagram.png" width="100%" height="100px" alt="">
-            <img src="../../../assets/images/whatsapp.png" width="100%" height="100px" alt="">
-            <img src="../../../assets/images/facebook.png" width="100%" height="100px" alt="">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <h3 class="text-center display-3">{{nombre}}</h3>
+            <p class="text-center" id="tam">{{info}}</p>
         </div>
-        <div class="col-md-9">
-            <h3 class="text-center">{{infoMiembro.nombre}}</h3>
-            <p class="text-center">{{infoMiembro.info}}</p>
-        </div>
+        <div class="col-md-1"></div>
     </div>
 </div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-conocetarjet',
@@ -6,27 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./conocetarjet.component.scss']
 })
 export class ConocetarjetComponent implements OnInit {
-
-  infoMiembros: Array<any> = [
-    {nombre:'Miguelangel Somana',info:'lorem ipsum'},
-    {nombre:'Kevin Hernandez',info:'lorem ipsum'},
-    {nombre:'Ivan Sanchez',info:'lorem ipsum'}
-  ];
+  @Input() nombre:string;
+  @Input() info:string;
   
-  constructor() { }
+  constructor() {}
 
   ngOnInit(): void {
   }
-
-  /*getImage(i){
-    switch(i){
-      case 0:
-        return "../../../assets/images/instagram.png"
-      case 1:
-        return "../../../assets/images/whatsapp.png"
-      default:
-        return "../../../assets/images/facebook.png"
-    }
-  }*/
-
+  
 }
