@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "sweetsurprise-mig24": {
+      "hosting": {
+        "sweetsurprise": [
+          "sweetsurprise-mig24"
+        ]
+      }
+    }
+  }
+}
