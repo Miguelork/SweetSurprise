@@ -30,6 +30,8 @@ export class RegisterformComponente implements OnInit {
     const email = form.value.email;
     const password = form.value.password;
     const password2 = form.value.password2;
+    const nombre2 = form.value.nombre2;
+    const apellido2 = form.value.apellido2;
     if(password == password2) {
       this.auth.signUp(email, password).then((userCredentials) => {
         const FireUser = userCredentials.user;
@@ -38,14 +40,15 @@ export class RegisterformComponente implements OnInit {
         const data = {
           uid: FireUser.uid,
           email: email,
-          name: email,
+          nombre: nombre2,
+          apellido: apellido2,
           role: 'customer'
         };
       
         this.afs.collection('users').doc(FireUser.uid).set(data)
         .then(()=> {
           this.auth.emailAndPassword(email, password).then(() => {
-            this.router.navigate(['/login]']);
+            this.router.navigate(['/home]']);
           }).catch(err => {
             alert(err.message);
           })
