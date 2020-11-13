@@ -6,9 +6,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument, } from '@angular/fire/firestore';
 import firebase from 'firebase/app';
 
-
-
-
 //Modelos:
 import { User } from "../models/user";
 
@@ -22,7 +19,6 @@ export class AuthService {
   
   User: Observable<User>;
   
-
   constructor (
     public afAuth: AngularFireAuth,
     private firestore: AngularFirestore,

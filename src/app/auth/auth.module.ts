@@ -13,8 +13,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { AuthGuard } from './auth.guard';
 
 //Componentes:
-import { RegisterformComponente } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { FormloginComponent } from './formlogin/formlogin.component';
+import { FormregisterComponent } from './formregister/formregister.component';
 
 @NgModule({
   imports: [
@@ -23,7 +23,7 @@ import { LoginComponent } from './login/login.component';
     AngularFireAuthModule,
     FormsModule
   ],
-  declarations: [RegisterformComponente, LoginComponent],
+  declarations: [FormloginComponent, FormregisterComponent],
   providers: [AuthService, AuthGuard]
 })
 export class AuthModule { }
