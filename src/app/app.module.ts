@@ -10,7 +10,6 @@ import { HomejumbComponent } from './components/homejumb/homejumb.component';
 import { ProductcardComponent } from './components/productcard/productcard.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { ListcardproductComponent } from './components/listcardproduct/listcardproduct.component';
-import { LoginformComponent } from './components/loginform/loginform.component';
 import { AdministradorComponent } from './pages/administrador/administrador.component';
 import { AdmlistproductComponent } from './components/admlistproduct/admlistproduct.component';
 import { AdmlistuserComponent } from './components/admlistuser/admlistuser.component';
@@ -41,7 +40,6 @@ import { AuthModule } from './auth/auth.module';
     ProductcardComponent,
     TiendaComponent,
     ListcardproductComponent,
-    LoginformComponent,
     AdministradorComponent,
     AdmlistproductComponent,
     AdmlistuserComponent,
