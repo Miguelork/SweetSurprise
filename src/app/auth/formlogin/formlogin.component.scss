@@ -9,3 +9,19 @@
 .tc{
     text-align: center;
 }
+
+.btn-google{
+    color: #333333;
+    border: 2px solid #333333;
+    background-color: whitesmoke;
+    &:hover{
+        background-color: #c4090c;
+        color: whitesmoke;  
+        border: 2px solid whitesmoke; 
+    }
+    &:active{
+        background-color: #c4090c;
+        color: #333333;
+        border: 2px solid #333333; 
+    }
+}

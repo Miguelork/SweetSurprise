@@ -67,12 +67,12 @@ export class AuthService {
             role: 'customer'
           }
           this.firestore.collection('users').doc(user.uid).set(newUser).then(() => {
-            this.router.navigate(['/dashboard/home'])
+            this.router.navigate(['/home'])
             return;
           })
         }
       })
-      this.router.navigate(['/dashboard/home']);
+      this.router.navigate(['/home']);
     })
   }
   

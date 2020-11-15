@@ -27,4 +27,8 @@ export class FormloginComponent implements OnInit {
     })
   }
 
+  onGoogle(){
+    this.auth.googleLogin();
+  }
+
 }
