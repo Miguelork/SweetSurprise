@@ -27,12 +27,15 @@ import { AngularFireModule } from '@angular/fire';
 import { environment } from '../environments/environment';
 import {AngularFireStorageModule} from '@angular/fire/storage';
 import { AuthModule } from './auth/auth.module';
+import { AdmieditproductComponent } from './components/admieditproduct/admieditproduct.component';
+import { AdmiedituserComponent } from './components/admiedituser/admiedituser.component';
+import { CrudproductService } from './services/crudproduct.service';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-   
     NavbarComponent,
     HomecarruselComponent,
     HomeComponent,
@@ -52,16 +55,18 @@ import { AuthModule } from './auth/auth.module';
     PerfilformComponent,
     ProductbusqComponent,
     PerfildeseoComponent,
-  
+    AdmieditproductComponent,
+    AdmiedituserComponent,
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AuthModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireStorageModule
   ],
-  providers: [],
+  providers: [CrudproductService,],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

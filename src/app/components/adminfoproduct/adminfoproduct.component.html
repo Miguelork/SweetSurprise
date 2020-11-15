@@ -1,12 +1,12 @@
-<div class="modal-dialog letra">
+<div class="modal-dialog letra" >
     <div class="modal-content">
         <div class="modal-header bg-pink">
             <h3 class="modal-title">Agregar Producto</h3>
             <button type="button" class="btn btn-cancel" data-dismiss="modal" aria-label="Close"><span
                     aria-hidden="true">&times;</span></button>
         </div>
-        <div class="modal-body">
-            <form class="form">
+        <div class="modal-body"> 
+            <form class="form" (ngSubmit)="agregar()">
                 <br>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
@@ -18,7 +18,7 @@
                                     d="M3 4.5a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7zm2 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-7zm3 0a.5.5 0 0 1 1 0v7a.5.5 0 0 1-1 0v-7z" />
                             </svg></div>
                     </div>
-                    <input type="text" class="form-control" placeholder="Nombre de Producto" required>
+                    <input type="text" class="form-control" placeholder="Nombre de Producto" [(ngModel)]="producto.nombre" [ngModelOptions]="{standalone: true}" nombre="nombre" required>
                 </div>
                 <br>
                 <div class="input-group mb-2">
@@ -29,10 +29,10 @@
                                     d="M2 1a1 1 0 0 0-1 1v4.586a1 1 0 0 0 .293.707l7 7a1 1 0 0 0 1.414 0l4.586-4.586a1 1 0 0 0 0-1.414l-7-7A1 1 0 0 0 6.586 1H2zm4 3.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
                             </svg></div>
                     </div>
-                    <input type="text" class="form-control" placeholder="Categoria" required>
+                    <input type="text" class="form-control" placeholder="Categoria" [(ngModel)]="producto.categoria" [ngModelOptions]="{standalone: true}" categoria="categoria" required>
                 </div>
                 <br>
-                <textarea class="form-control" placeholder="Descripción" rows="3" required></textarea>
+                <textarea class="form-control" placeholder="Descripción" rows="3" [(ngModel)]="producto.descripcion" [ngModelOptions]="{standalone: true}" descripcion="descripcion" required></textarea>
                 <br>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
@@ -44,7 +44,7 @@
                                     d="M13 4a2 2 0 0 0 2 2V4h-2zM3 4a2 2 0 0 1-2 2V4h2zm10 8a2 2 0 0 1 2-2v2h-2zM3 12a2 2 0 0 0-2-2v2h2zm7-4a2 2 0 1 1-4 0 2 2 0 0 1 4 0z" />
                             </svg></div>
                     </div>
-                    <input type="number" class="form-control" min="0.1" placeholder="Precio" required>
+                    <input type="number" class="form-control" min="1" placeholder="Precio" [(ngModel)]="producto.precio" [ngModelOptions]="{standalone: true}" precio="precio" required>
                 </div>
                 <br>
                 <div class="input-group mb-2">
@@ -55,7 +55,7 @@
                                     d="M12.643 15C13.979 15 15 13.845 15 12.5V5H1v7.5C1 13.845 2.021 15 3.357 15h9.286zM5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5zM.8 1a.8.8 0 0 0-.8.8V3a.8.8 0 0 0 .8.8h14.4A.8.8 0 0 0 16 3V1.8a.8.8 0 0 0-.8-.8H.8z" />
                             </svg></div>
                     </div>
-                    <input type="number" class="form-control" min="100" placeholder="Stock" required>
+                    <input type="number" class="form-control" min="100" placeholder="Stock" [(ngModel)]="producto.stock" [ngModelOptions]="{standalone: true}" stock="stock" required>
                 </div>
                 <br>
                 <div class="input-group mb-2">
@@ -66,8 +66,9 @@
                                     d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z" />
                             </svg></div>
                     </div>
-                    <input type="text" class="form-control" placeholder="Fabricante" required>
+                    <input type="text" class="form-control" placeholder="Fabricante" [(ngModel)]="producto.fabricante" [ngModelOptions]="{standalone: true}" fabricante="fabricante" required>
                 </div>
+                <br>
                 <br>
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
@@ -77,7 +78,7 @@
                                     d="M14.002 2h-12a1 1 0 0 0-1 1v9l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15.002 9.5V3a1 1 0 0 0-1-1zm-12-1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm4 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
                             </svg> 1</div>
                     </div>
-                    <input type="file" class="form-control" placeholder="Imagen Principal" required>
+                    <input type="file" class="form-control" placeholder="Imagen Principal" [(ngModel)]="producto.img1" [ngModelOptions]="{standalone: true}" img1="img1">
                 </div>
                 <br>
                 <div class="input-group mb-2">
@@ -88,7 +89,7 @@
                                     d="M14.002 2h-12a1 1 0 0 0-1 1v9l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15.002 9.5V3a1 1 0 0 0-1-1zm-12-1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm4 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
                             </svg> 2</div>
                     </div>
-                    <input type="file" class="form-control" placeholder="Imagen Secundaria" required>
+                    <input type="file" class="form-control" placeholder="Imagen Secundaria" [(ngModel)]="producto.img2" [ngModelOptions]="{standalone: true}" img2="img2">
                 </div>
                 <br>
                 <div class="input-group mb-2">
@@ -99,14 +100,14 @@
                                     d="M14.002 2h-12a1 1 0 0 0-1 1v9l2.646-2.354a.5.5 0 0 1 .63-.062l2.66 1.773 3.71-3.71a.5.5 0 0 1 .577-.094L15.002 9.5V3a1 1 0 0 0-1-1zm-12-1a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V3a2 2 0 0 0-2-2h-12zm4 4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z" />
                             </svg> 3</div>
                     </div>
-                    <input type="file" class="form-control" placeholder="Imagen Terciaria" required>
+                    <input type="file" class="form-control" placeholder="Imagen Terciaria" [(ngModel)]="producto.img3" [ngModelOptions]="{standalone: true}" img3="img3">
                 </div>
-                <br>
+                <button type="submit" class="btn container-fluid btn-lg btn-acept">Agregar</button>
             </form>
         </div>
+        <br>
         <div class="modal-footer bg-pink">
-            <button type="button" class="btn btn-cancel" data-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-acept">Agregar</button>
+            <br>
         </div>
     </div>
 </div>
