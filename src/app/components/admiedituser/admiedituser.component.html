@@ -1,1 +1,51 @@
-<p>admiedituser works!</p>
+<div class="modal-dialog letra">
+    <div class="modal-content">
+        <div class="modal-header bg-pink">
+            <h3 class="modal-title">Editar {{editUsuario.name}}</h3>
+            <button type="button" class="btn btn-cancel" data-dismiss="modal" aria-label="Close"><span
+                    aria-hidden="true">&times;</span></button>
+        </div>
+        <div class="modal-body">
+            <form class="form" (ngSubmit)="aggUserEditado()">
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ador-form"><svg width="1em" height="1em" viewBox="0 0 16 16"
+                                class="bi bi-person-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd"
+                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                            </svg></div>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Nombre Completo" [(ngModel)]="editUsuario.name"
+                        [ngModelOptions]="{standalone: true}" name="name" required>
+                </div>
+                <br>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ador-form">@</div>
+                    </div>
+                    <input type="email" class="form-control" placeholder="Email" [(ngModel)]="editUsuario.email"
+                        [ngModelOptions]="{standalone: true}" email="email" required>
+                </div> 
+                <br>
+                <div class="input-group mb-2">
+                    <div class="input-group-prepend">
+                        <div class="input-group-text ador-form"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-award-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8 0l1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/>
+                            <path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/>
+                          </svg></div>
+                    </div>
+                    <select class="form-control" role="role" [(ngModel)]="editUsuario.role"
+                        [ngModelOptions]="{standalone: true}">
+                        <option [ngValue]="c">customer</option>
+                        <option [ngValue]="a">admin</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn container-fluid btn-lg btn-acept mt-3">Guardar Cambios</button>
+            </form>
+        </div>
+        <br>
+        <div class="modal-footer bg-pink">
+            <br>
+        </div>
+    </div>
+</div>

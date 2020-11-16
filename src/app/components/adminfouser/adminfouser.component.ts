@@ -12,9 +12,11 @@ export class AdminfouserComponent implements OnInit {
   usuario:User={
     email:'',
     name:'',
-    role:'',
+    role:'customer',
     contrasena:''
   }
+  a='admin';
+  c='customer';
 
   constructor(private crudu: CruduserService) { }
  
@@ -25,7 +27,7 @@ export class AdminfouserComponent implements OnInit {
     this.crudu.agregarUsuario(this.usuario);
     this.usuario.name ='';
     this.usuario.email='';
-    this.usuario.role='';
+    this.usuario.role='customer';
     this.usuario.contrasena='';
   }
 
