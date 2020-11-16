@@ -21,7 +21,6 @@ export class FormregisterComponent implements OnInit {
     const password = form.value.password;
     const password2 = form.value.password2;
     const nombre2 = form.value.nombre2;
-    const apellido2 = form.value.apellido2;
     if(password == password2) {
       this.auth.signUp(email, password).then((userCredentials) => {
         const FireUser = userCredentials.user;
@@ -30,8 +29,7 @@ export class FormregisterComponent implements OnInit {
         const data = {
           uid: FireUser.uid,
           email: email,
-          nombre: nombre2,
-          apellido: apellido2,
+          name: nombre2,
           role: 'customer'
         };
       

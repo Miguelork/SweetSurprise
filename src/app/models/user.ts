@@ -2,6 +2,6 @@ export class User {
     uid? : string;
     email? : string;
     name? : string;
+    contrasena?: string;
     role? : string;
-    
 }
