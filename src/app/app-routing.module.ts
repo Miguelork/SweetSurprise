@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
+import { AuthGuard } from './auth/auth.guard';
 
 
 const routes: Routes = [
@@ -16,7 +17,7 @@ const routes: Routes = [
   {path: 'admi', component: AdministradorComponent},
   {path: 'conocenos', component: ConocenosComponent},
   {path: 'contacto', component: ContactanosComponent},
-  {path: 'perfil', component: PerfilComponent},
+  {path: 'perfil', component: PerfilComponent, canActivate:[AuthGuard]},
 
   
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { User } from 'src/app/models/user';
+import { CruduserService } from 'src/app/services/cruduser.service';
 
 @Component({
   selector: 'app-adminfouser',
@@ -7,9 +9,26 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminfouserComponent implements OnInit {
 
-  constructor() { }
+  usuario:User={
+    email:'',
+    name:'',
+    role:'customer',
+    contrasena:''
+  }
+  a='admin';
+  c='customer';
 
+  constructor(private crudu: CruduserService) { }
+ 
   ngOnInit(): void {
+  }
+
+  agregar(){
+    this.crudu.agregarUsuario(this.usuario);
+    this.usuario.name ='';
+    this.usuario.email='';
+    this.usuario.role='customer';
+    this.usuario.contrasena='';
   }
 
 }

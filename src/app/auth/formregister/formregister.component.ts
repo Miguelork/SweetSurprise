@@ -1,31 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestore } from "@angular/fire/firestore";
-import { AngularFireAuth } from '@angular/fire/auth';
-import { Title } from "@angular/platform-browser";
 import { Router} from "@angular/router";
 import { NgForm } from '@angular/forms';
 import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
-  selector: 'app-registro',
-  templateUrl: 'register.component.html',
-  styleUrls: ['../auth.styles.css']
+  selector: 'app-formregister',
+  templateUrl: './formregister.component.html',
+  styleUrls: ['./formregister.component.scss']
 })
 
+export class FormregisterComponent implements OnInit {
 
-export class RegisterformComponente implements OnInit {
+  constructor(public auth: AuthService, public db: AngularFirestore, public router: Router) { }
 
-  constructor(
-    public auth: AuthService,
-    public afs: AngularFirestore,
-    public title: Title,
-    public router: Router,
-  ) { }
-
-  ngOnInit() {
-    this.title.setTitle('Registro');
+  ngOnInit(): void {
   }
-
   public onSignup(form: NgForm) {
     const email = form.value.email;
     const password = form.value.password;
@@ -43,7 +33,7 @@ export class RegisterformComponente implements OnInit {
           role: 'customer'
         };
       
-        this.afs.collection('users').doc(FireUser.uid).set(data)
+        this.db.collection('users').doc(FireUser.uid).set(data)
         .then(()=> {
           this.auth.emailAndPassword(email, password).then(() => {
             this.router.navigate(['/home]']);
@@ -63,4 +53,3 @@ export class RegisterformComponente implements OnInit {
     
 
 }
-

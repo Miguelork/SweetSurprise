@@ -80,9 +80,11 @@ main{
         color:whitesmoke;
         background-color:#ed1544
     }
-    tbody{
+    tbody{ 
         color:whitesmoke;
         background-color:#e9537d;
+    }
+    tr{
         &:hover{
             background-color:#ed1544;
             color: white;   
@@ -92,6 +94,7 @@ main{
             color: #f5bacb;
         }
     }
+    
 }
 .ador-form{
     color:whitesmoke;

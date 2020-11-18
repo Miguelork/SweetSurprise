@@ -6,9 +6,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { AngularFirestore, AngularFirestoreDocument, } from '@angular/fire/firestore';
 import firebase from 'firebase/app';
 
-
-
-
 //Modelos:
 import { User } from "../models/user";
 
@@ -22,7 +19,6 @@ export class AuthService {
   
   User: Observable<User>;
   
-
   constructor (
     public afAuth: AngularFireAuth,
     private firestore: AngularFirestore,
@@ -71,12 +67,12 @@ export class AuthService {
             role: 'customer'
           }
           this.firestore.collection('users').doc(user.uid).set(newUser).then(() => {
-            this.router.navigate(['/dashboard/home'])
+            this.router.navigate(['/home'])
             return;
           })
         }
       })
-      this.router.navigate(['/dashboard/home']);
+      this.router.navigate(['/home']);
     })
   }
   

@@ -1,26 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from "../auth.service";
-import { AngularFirestore } from "@angular/fire/firestore";
-import { Title } from "@angular/platform-browser";
 import { Router} from "@angular/router";
-import { AngularFireAuth } from '@angular/fire/auth';
 import { NgForm } from '@angular/forms';
 
 @Component({
-  selector: 'app2-loginform',
-  templateUrl: './login.component.html',
-  styleUrls: ['../auth.styles.css']
+  selector: 'app-formlogin',
+  templateUrl: './formlogin.component.html',
+  styleUrls: ['./formlogin.component.scss']
 })
-export class LoginComponent {
+export class FormloginComponent implements OnInit {
 
-  constructor(
-    public auth: AuthService,
-    public router: Router,
-  ) { }
-  ngOnInit(){
+  constructor(public auth: AuthService, public router: Router) { }
 
+  ngOnInit(): void {
   }
-
   //Se leen los datos puestos y llama al método que inicia la sesión:
   login(form: NgForm) {
     const email = form.value.email;
@@ -34,9 +27,8 @@ export class LoginComponent {
     })
   }
 
-  google(){
+  onGoogle(){
     this.auth.googleLogin();
-    
   }
 
 }
