@@ -38,7 +38,6 @@ export class AdmlistproductComponent implements OnInit {
 
   almacenaProd(producto){
     this.product = producto;
-    alert(this.product);
   }
 
 }

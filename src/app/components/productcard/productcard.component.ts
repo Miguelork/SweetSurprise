@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Product } from 'src/app/models/product';
+import { CrudproductService } from 'src/app/services/crudproduct.service';
 
 @Component({
   selector: 'app-productcard',
@@ -7,12 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductcardComponent implements OnInit {
 
-  constructor() {
+  @Input() cardProducto:Product={
+    nombre:'',
+    descripcion:'',
+    categoria:'',
+    precio:0,
+    stock:0,
+    fabricante:'',
+    img1:null,
+    img2:null,
+    img3:null,
+  }
+
+  constructor(private crudp: CrudproductService) {
 
   }
-  public nombre= "M&M";
-  public categoria= "Chocolate";
-  public precio= 2.50;
+  
   ngOnInit(): void {
 
   }

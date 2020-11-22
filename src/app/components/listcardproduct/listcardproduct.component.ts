@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { CrudproductService } from 'src/app/services/crudproduct.service';
 
@@ -22,7 +23,7 @@ export class ListcardproductComponent implements OnInit {
     img3:null,
   }
 
-  constructor(private crudp: CrudproductService) {
+  constructor(private crudp: CrudproductService, private router:Router) {
     this.crudp.listProducto().subscribe(prod=>{
       this.productos = prod;
       console.log(this.productos)
@@ -30,6 +31,15 @@ export class ListcardproductComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  almacename(producto){
+    this.product = producto;
+  }
+  verDetalles(producto){
+    let m=producto.id;
+    console.log(m);
+    this.router.navigate(['/detalle',m]);
   }
 
 }

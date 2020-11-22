@@ -6,7 +6,7 @@ export interface Product {
     precio:number;
     stock:number;
     fabricante:string;
-    img1:File;
-    img2:File;
-    img3:File;
+    img1:string;
+    img2:string;
+    img3:string;
 }

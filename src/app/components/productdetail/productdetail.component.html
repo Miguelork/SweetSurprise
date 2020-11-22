@@ -1,0 +1,24 @@
+<div class="container letra">
+    <div class="jumbotron bg-pink bor-der">
+        <div class="row">
+            <div class="col-md-7 bg-white bor-der">
+                <br>
+                <div class="container">
+                    <div class="col-md-12">
+                        <app-carruseldetail [pict1]="infoProduc.img1" [pict2]="infoProduc.img2" [pict3]="infoProduc.img3">
+                        </app-carruseldetail>
+                    </div>
+                </div>
+                <br>
+                <h1 class="ml-5 txt-black display-3">{{infoProduc.nombre}}</h1>
+                <h1 class="ml-5 txt-black display-4">{{infoProduc.categoria}}</h1>
+                <p class="ml-5 txt-black">{{infoProduc.descripcion}}</p>
+                <h1 class="ml-5 txt-black display-6">{{infoProduc.fabricante}}</h1>
+                <br>
+            </div>
+            <div class="col-md-5 ">
+                <!--Aqui va la bolsa-->
+            </div>
+        </div>
+    </div>
+</div>

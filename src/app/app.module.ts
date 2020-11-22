@@ -30,6 +30,13 @@ import { AdmiedituserComponent } from './components/admiedituser/admiedituser.co
 import { CrudproductService } from './services/crudproduct.service';
 import { FormsModule } from '@angular/forms';
 import { CruduserService } from './services/cruduser.service';
+import { ProductdetailComponent } from './components/productdetail/productdetail.component';
+import { BolsaComponent } from './components/bolsa/bolsa.component';
+import { ModalcompraComponent } from './components/modalcompra/modalcompra.component';
+import { FormcompraComponent } from './components/formcompra/formcompra.component';
+import { CompraComponent } from './pages/compra/compra.component';
+import { CarruseldetailComponent } from './components/carruseldetail/carruseldetail.component';
+import { DetailprodComponent } from './pages/detailprod/detailprod.component';
 
 
 @NgModule({
@@ -56,6 +63,13 @@ import { CruduserService } from './services/cruduser.service';
     PerfildeseoComponent,
     AdmieditproductComponent,
     AdmiedituserComponent,
+    ProductdetailComponent,
+    BolsaComponent,
+    ModalcompraComponent,
+    FormcompraComponent,
+    CompraComponent,
+    CarruseldetailComponent,
+    DetailprodComponent,
   ],
   imports: [
     BrowserModule,
