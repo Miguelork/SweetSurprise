@@ -9,27 +9,22 @@ import { CrudproductService } from 'src/app/services/crudproduct.service';
   styleUrls: ['./detailprod.component.scss']
 })
 export class DetailprodComponent implements OnInit {
-  aux:any;
-  prod:Product={
-    nombre:'',
-    descripcion:'',
-    categoria:'',
-    precio:0,
-    stock:0,
-    fabricante:'',
-    img1:null,
-    img2:null,
-    img3:null,
-  };
-  id='';
+  cargando = false;
+  prod: any;
+  id: any;
 
-  constructor(private router:Router, private route:ActivatedRoute, private crudp:CrudproductService) { }
-
-  ngOnInit(): void {
-    this.id = this.route.snapshot.paramMap.get('id');
-    this.aux = this.crudp.getProducto('id');
-    this.prod = this.aux;
-    console.log(this.prod);
+  constructor(private router:Router, private route:ActivatedRoute, private crudp:CrudproductService) { 
+    this.route.params.subscribe(params => (this.id = params['id']));
   }
-
+  
+  ngOnInit(): void {
+    this.cargando = true;
+    this.crudp.getProducto(this.id)
+      .subscribe( resp => {
+        this.cargando = false;
+        this.prod = resp;
+        console.log(this.prod);
+      });
+  }
+  
 }
