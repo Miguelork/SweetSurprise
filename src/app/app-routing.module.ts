@@ -9,6 +9,8 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { TiendaComponent } from './pages/tienda/tienda.component';
 import { AuthGuard } from './auth/auth.guard';
 import { DetailprodComponent } from './pages/detailprod/detailprod.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
+import { CompraComponent } from './pages/compra/compra.component';
 
 
 const routes: Routes = [
@@ -19,6 +21,8 @@ const routes: Routes = [
   {path: 'conocenos', component: ConocenosComponent},
   {path: 'contacto', component: ContactanosComponent},
   {path: 'perfil', component: PerfilComponent, canActivate:[AuthGuard]},
+  {path: 'carrito', component: CarritoComponent},
+  {path: 'compra', component: CompraComponent},
 
   
 

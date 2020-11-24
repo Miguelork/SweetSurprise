@@ -37,6 +37,8 @@ import { FormcompraComponent } from './components/formcompra/formcompra.componen
 import { CompraComponent } from './pages/compra/compra.component';
 import { CarruseldetailComponent } from './components/carruseldetail/carruseldetail.component';
 import { DetailprodComponent } from './pages/detailprod/detailprod.component';
+import { CarritoComponent } from './pages/carrito/carrito.component';
+import { ListbolsaComponent } from './components/listbolsa/listbolsa.component';
 
 
 @NgModule({
@@ -70,6 +72,8 @@ import { DetailprodComponent } from './pages/detailprod/detailprod.component';
     CompraComponent,
     CarruseldetailComponent,
     DetailprodComponent,
+    CarritoComponent,
+    ListbolsaComponent,
   ],
   imports: [
     BrowserModule,
