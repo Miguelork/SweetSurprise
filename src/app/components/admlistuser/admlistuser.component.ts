@@ -32,7 +32,6 @@ export class AdmlistuserComponent implements OnInit {
 
   almacenaUs(usuarios){
     this.user = usuarios;
-    alert(this.user);
   }
 
 }

@@ -1,22 +1,20 @@
 <div class="card shadow-sm card-product letra">
-    <svg class="bd-placeholder-img card-img-top card-img" width="100%" height="140" xmlns="http://www.w3.org/2000/svg"
-        preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Dulces">
-        <title>Placeholder</title>
-        <rect width="100%" height="100%" fill="#55595c" /><text x="50%" y="50%" fill="#eceeef"
-            dy=".2em">Dulces</text>
-    </svg>
+    <div>
+        <img class="bd-placeholder-img card-img-top card-img" width="100%" height="140" preserveAspectRatio="xMidYMid slice" focusable="false" src="{{cardProducto.img1}}" alt="">
+    </div>
     <div class=" container">
         <div class="row">
             <br>
             <div class="col-sm-12">
-                <h2>{{nombre}}</h2>
+                <h2>{{cardProducto.nombre}}</h2>
             </div>
             <div class="col-sm-6">
-                <h5>{{categoria}}</h5>
+                <h5>{{cardProducto.categoria}}</h5>
             </div>
             <div class="col-sm-6 esq">
-                <h1 class="">{{precio}}$</h1>
+                <h1 class="">{{cardProducto.precio}}$</h1>
             </div>
+
         </div>
     </div>
 </div>

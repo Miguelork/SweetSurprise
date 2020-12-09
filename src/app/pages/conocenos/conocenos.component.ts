@@ -22,15 +22,15 @@ export class ConocenosComponent implements OnInit {
     switch(n){
       case 1:
         this.nombre='Miguelangel Somana';
-        this.info='lorem ipsum habemus';
+        this.info='Estudiante de ingeneria de sistemas - 23 años  ';
         break;
       case 2:
         this.nombre='Kevin Hernandez';
-        this.info='lorem ipsum habemus';
+        this.info='Estudiannte de ingeneria de sistemas - 22 años';
         break;
       case 3:
         this.nombre='Ivan Sanchez';
-        this.info='lorem ipsum habemus';
+        this.info='Estudiande de ingeneria electrica - 23 años';
         break;
     }
   }

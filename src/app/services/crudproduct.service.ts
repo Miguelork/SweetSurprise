@@ -10,7 +10,7 @@ import { Product } from '../models/product';
 export class CrudproductService {
   private productosCollection: AngularFirestoreCollection<Product>;
   private productos: Observable<Product[]>;
-  private productoDoc: AngularFirestoreDocument<Product>;
+  productoDoc: AngularFirestoreDocument<Product>;
 
   constructor(private db: AngularFirestore) { 
     this.productosCollection = db.collection<Product>('product');
@@ -25,6 +25,11 @@ export class CrudproductService {
   listProducto(){
     return this.productos;
   }
+
+  getProducto(id) {
+    return this.db.collection('product').doc(id).valueChanges()
+  } 
+
   agregarProducto(producto: Product){
     this.productosCollection.add(producto);
   }
