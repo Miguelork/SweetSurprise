@@ -20,11 +20,11 @@ export class CrudproductService {
         const id = a.payload.doc.id;
         return { id, ...data };
       }))
-    );
+    ); 
   }
   listProducto(){
     return this.productos;
-  }
+  } 
 
   getProducto(id) {
     return this.db.collection('product').doc(id).valueChanges()

@@ -1,21 +1,29 @@
-<table class="table table-pink table-responsive-sm table-responsive-md table-responsive-lg table-bordered">
-    <thead>
-        <tr>
-            <th scope="col">Fabricante</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Categoria</th>
-            <th scope="col"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <div *ngFor="let producto of productos[0].Productos">
-            <tr>
-                <td>{{producto.fabricante}}</td>
-                <td>{{producto.nombre}}</td>
-                <td>{{producto.categoria}} </td>
-
-            </tr>
-
-        </div>
-    </tbody>
-</table>
+<div class="container">
+    <div class="col-md-12">
+        <table class="table table-pink table-responsive-sm table-responsive-md table-responsive-lg table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Fabricante</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Categoria</th>
+                    <th scope="col"></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto of productos[0].Productos">
+                    <th scope="row">{{producto.nombre}}</th>
+                    <td>{{producto.fabricante}}</td>
+                    <td>{{producto.categoria}} </td>
+                    <!--Metodo eliminar en el click para borrar de lista de usuario-->
+                    <td><span><button class="btn btn-cancel btn-sm container-fluid">
+                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd"
+                        d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z" />
+                        <path fillRule="evenodd"
+                        d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z" />
+                    </svg></button></span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
