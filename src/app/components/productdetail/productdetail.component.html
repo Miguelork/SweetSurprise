@@ -1,11 +1,13 @@
 <div class="container letra">
     <div class="jumbotron bg-pink bor-der">
         <div class="row">
-            <div class="col-md-6 bg-white bor-der">
+            <div class="col-md-7 bg-white bor-der">
                 <br>
-                <div class="col-md-12">
-                <app-carruseldetail [pict1]="infoProduc.img1" [pict2]="infoProduc.img2" [pict3]="infoProduc.img3">
-                </app-carruseldetail>
+                <div class="container">
+                    <div class="col-md-12">
+                        <app-carruseldetail [pict1]="infoProduc.img1" [pict2]="infoProduc.img2" [pict3]="infoProduc.img3">
+                        </app-carruseldetail>
+                    </div>
                 </div>
                 <br>
                 <h1 class="ml-5 txt-black display-3">{{infoProduc.nombre}}</h1>
@@ -14,15 +16,16 @@
                 <h1 class="ml-5 txt-black display-6">{{infoProduc.fabricante}}</h1>
                 <br>
             </div>
-            <div class="col-md-6">
+            <div class="col-md-5 ">
                 <div class="input-group mb-2">
                     <div class="input-group-prepend">
-                        <div class="input-group-text ador-form">Cantidad que desea comprar</div>
+                        <div class="input-group-text ador-form">CANTIDAD A COMPRAR</div>
                     </div>
-                    <input type="number" class="form-control" min="100" placeholder="Stock" [(ngModel)]="producto.stock" stock="stock" required>
+                    <input type="number" class="form-control" min="100" placeholder="Stock" stock="stock" required>
                 </div>
                 <button class="btn btn-acept btn-block" (click)="AgregarCarrito(infoProduc)">Agregar al Carrito</button>
-                <button class="btn btn-acept btn-block" (click)="AgregarDeseos(infoProduc)">Lista de deseos</button>
+                <button class="btn btn-acept btn-block" (click)="AgregarDeseos(infoProduc)">Lista deseos</button>
+
             </div>
         </div>
     </div>
