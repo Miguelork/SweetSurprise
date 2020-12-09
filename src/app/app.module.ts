@@ -38,6 +38,8 @@ import { CompraComponent } from './pages/compra/compra.component';
 import { CarruseldetailComponent } from './components/carruseldetail/carruseldetail.component';
 import { DetailprodComponent } from './pages/detailprod/detailprod.component';
 import { CarritoComponent } from './pages/carrito/carrito.component';
+import { PerfilopeComponent } from './components/perfilope/perfilope.component';
+import { AdmiopeComponent } from './components/admiope/admiope.component';
 
 
 @NgModule({
@@ -72,6 +74,8 @@ import { CarritoComponent } from './pages/carrito/carrito.component';
     CarruseldetailComponent,
     DetailprodComponent,
     CarritoComponent,
+    PerfilopeComponent,
+    AdmiopeComponent,
   ],
   imports: [
     BrowserModule,
