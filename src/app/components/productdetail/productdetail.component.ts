@@ -81,7 +81,7 @@ export class ProductdetailComponent implements OnInit {
 
   }
 
-  AgregarCarrito(){
+  AgregarCarrito(infoProduc){
           this.cart.addProduct(this.infoProduc);
 
 
