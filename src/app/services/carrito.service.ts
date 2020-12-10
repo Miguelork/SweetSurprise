@@ -105,6 +105,7 @@ export class CartService {
     let total = 0;
     for (let i = 0; i < products.length; i++) {
       total += (products[i]['precio']);
+      console.log(total+1)
     }
     return total;
   }

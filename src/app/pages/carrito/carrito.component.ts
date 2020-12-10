@@ -49,8 +49,8 @@ export class CarritoComponent implements OnInit {
 
   getTotal(){
     this.total = this.CartService.totalPrice(this.cart.products);
-    this.iva = this.total * 0.16;
-    this.totalIva = this.total + this.iva;
+    console.log(this.total);
+    this.totalIva = this.total;
   }
 
   Eliminar(product, index){
@@ -65,7 +65,7 @@ export class CarritoComponent implements OnInit {
 
   Aumentar(index){
     this.cart.products[index].cantidad = this.cart.products[index].cantidad + 1;
-    this.totalIva = this.totalIva + (this.cart.products[index].precio * 0.16)
+    this.totalIva = this.totalIva +this.cart.products[index].precio 
   }
 
   Restar(index){
@@ -73,7 +73,7 @@ export class CarritoComponent implements OnInit {
       alert("No se puede bajar ya la cantidad del producto ya que tienes 1, si desea eliminar el producto, toque el boton de eliminar")
     }else {
     this.cart.products[index].cantidad = this.cart.products[index].cantidad - 1;
-    this.totalIva = this.totalIva - (this.cart.products[index].precio * 0.16)
+    this.totalIva = this.totalIva - this.cart.products[index].precio 
     }
   }
 

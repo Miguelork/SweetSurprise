@@ -36,17 +36,14 @@ export class AdmiopeComponent implements OnInit {
 getOrders() {
   this.auth.User.subscribe(user => {
     if(user){
-      this.ordersService.getorders(user.uid).subscribe(orders => this.orders = orders);
-      combineLatest(this.startObs, this.endObs).subscribe((value) => {
-        this.firequery(value[0], value[1], user.uid).subscribe((ordenes) => {
-          this.orders = ordenes;
-        })
-      })
+      this.ordersService.getorders().subscribe(orders => this.orders = orders);
+     
     }
   })
 }
-firequery(start,end, uid){
-  return this.afs.collection('orders', ref => ref.orderBy('created_at').where("uid", "==", uid).where("created_at", ">=", start)).valueChanges();  
+firequery(start,end){
+  return this.afs.collection('products', ref => ref.orderBy('name')
+  .startAt(start).endAt(end)).valueChanges();  
 }
 
 }
