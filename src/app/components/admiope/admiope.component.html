@@ -12,10 +12,10 @@
             <br>
             <table class="table table-pink table-responsive-sm table-responsive-md table-responsive-lg table-bordered">
                 <thead>
-                    <tr>
-                        <th scope="col">Id</th>
-                        <th scope="col">Fecha</th>
-                        <th scope="col">Costo</th>
+                    <tr *ngFor="let order of orders">
+                        <th scope="row">{{order.id}}</th>
+                        <td>{{order.created_at}}</td>
+                        <td>{{order.amount}}</td>
                 </thead>
                 <tbody>
                     <!--En el de abajo tu ngFor y en los td le pasas las cosasa-->

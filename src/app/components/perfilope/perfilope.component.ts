@@ -41,6 +41,7 @@ getOrders() {
       combineLatest(this.startObs, this.endObs).subscribe((value) => {
         this.firequery(value[0], value[1], user.uid).subscribe((ordenes) => {
           this.orders = ordenes;
+          console.log(this.orders);
         })
       })
     }
