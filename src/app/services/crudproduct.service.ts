@@ -26,6 +26,9 @@ export class CrudproductService {
     return this.productos;
   } 
 
+
+
+
   getProducto(id) {
     return this.db.collection('product').doc(id).valueChanges()
   } 
