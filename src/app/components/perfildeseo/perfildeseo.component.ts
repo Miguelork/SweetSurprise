@@ -18,6 +18,10 @@ export class PerfildeseoComponent implements OnInit {
  
 
   constructor(private crudp: DeseoDos, private router:Router) {
+    
+  }
+
+  ngOnInit(): void {
     this.crudp.listProducto().subscribe(prod=>{
       this.productos = prod;
       console.log(this.productos)
@@ -25,10 +29,11 @@ export class PerfildeseoComponent implements OnInit {
     })
   }
 
-  ngOnInit(): void {
+  elimanar(producto){
+    this.crudp.eliminarProducto(producto);
   }
-
  
+  
   verDetalles(producto){
     let m=producto.id;
     console.log(m);
