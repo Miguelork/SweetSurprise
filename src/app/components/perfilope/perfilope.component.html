@@ -6,23 +6,16 @@
                     <th scope="col">Id</th>
                     <th scope="col">Fecha</th>
                     <th scope="col">Costo</th>
-                    <th scope="col"></th>
+
             </thead>
             <tbody>
                 <!--En el de abajo tu ngFor y en los td le pasas las cosasa-->
-                <tr >
-                    <th scope="row"></th>
-                    <td></td>
-                    <td></td>
+                <tr *ngFor="let order of orders">
+                    <th scope="row">{{order.id}}</th>
+                    <td>{{order.created_at}}</td>
+                    <td>{{order.amount}}</td>
                     <!--Metodo eliminar en el click para borrar de lista de usuario-->
-                    <td><span><button class="btn btn-cancel btn-sm container-fluid">
-                        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-x" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path fillRule="evenodd"
-                        d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z" />
-                        <path fillRule="evenodd"
-                        d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z" />
-                    </svg></button></span></td>
+
                 </tr>
             </tbody>
         </table>
