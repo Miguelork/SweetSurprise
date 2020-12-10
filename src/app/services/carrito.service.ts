@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 import { AngularFirestore, AngularFirestoreCollection, AngularFirestoreDocument } from '@angular/fire/firestore'
 import { Cart } from "../models/cart";
-import { Product } from "../models/product";
+import { Product } from '../models/product';
 import { reject } from 'q';
 import { isUndefined, isNullOrUndefined } from 'util';
 
@@ -12,15 +12,22 @@ import { isUndefined, isNullOrUndefined } from 'util';
 })
 export class CartService {
   
+  productDoc: AngularFirestoreDocument<Cart>;
   constructor(
     public auth: AuthService,
     private afs: AngularFirestore,
+    
   ) { }
 
   createCart(id){
     this.afs.collection('carts').doc(id).set(
       {id: id, products: [], totalProducts: 0}
     )
+  }
+
+  deleteProducto(id, index){
+    this.productDoc = this.afs.doc(`${id}/products/${index}`);
+    this.productDoc.delete();
   }
 
   myCart(uid){
@@ -77,6 +84,7 @@ export class CartService {
     return sum;
   }
 
+
   resetCart(uid): Promise<any>{
     return new Promise((resolve, reject) => {
       const ref = this.myCartRef(uid);
@@ -96,11 +104,14 @@ export class CartService {
   totalPrice(products: Product[]): number {
     let total = 0;
     for (let i = 0; i < products.length; i++) {
-      total += (parseInt(products[i]['qty']) * products[i]['price']);
+      total += (products[i]['precio']);
     }
     return total;
   }
 
+
+
+  
   removeProduct(product, uid, index): Promise<any> {
     return new Promise((resolve, reject) => {
       const ref = this.myCartRef(uid);
@@ -123,4 +134,8 @@ export class CartService {
     })
   }
 
+
+
+  
 }
+

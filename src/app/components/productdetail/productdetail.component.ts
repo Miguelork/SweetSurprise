@@ -36,6 +36,7 @@ export class ProductdetailComponent implements OnInit {
     img1:null,
     img2:null,
     img3:null,
+    cantidad: 1
   } 
 
   
@@ -83,6 +84,7 @@ export class ProductdetailComponent implements OnInit {
 
   AgregarCarrito(infoProduc){
           this.cart.addProduct(this.infoProduc);
+          alert("Se agrego al carrito de compras");
 
 
   }

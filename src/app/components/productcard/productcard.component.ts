@@ -19,6 +19,7 @@ export class ProductcardComponent implements OnInit {
     img1:null,
     img2:null,
     img3:null,
+    cantidad:1
   }
 
   constructor(private crudp: CrudproductService) {
