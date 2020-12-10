@@ -1,69 +1,72 @@
-<table class="table table-pink table-responsive-sm table-responsive-md table-responsive-lg table-bordered">
-    <thead>
-        <tr>
-            <th scope="col">Nombre</th>
-            <th scope="col">Precio</th>
-            <th scope="col">Cantidad</th>
-            <th>Acciones</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr *ngFor="let producto  of cart.products,  let i = index">
-            <td>{{producto.nombre}}</td>
-            <td>{{producto.precio}}</td>
-            <td>{{producto.cantidad}}</td>
-            <td><span><button class=" btn-acept btn-sm container-fluid" (click)="Aumentar(i)"> Aumentar Cantidad + 1 <svg width="1em "
-            height="1em " viewBox="0 0 16 16 " class="bi bi-pencil " fill="currentColor "
-            xmlns="http://www.w3.org/2000/svg ">
-            <path fillRule="evenodd "
-            d="M11.293 1.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-9 9a1 1 0 0 1-.39.242l-3 1a1 1 0 0 1-1.266-1.265l1-3a1 1 0 0 1 .242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z " />
-            <path fillRule="evenodd "
-            d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 0 0 .5.5H4v.5a.5.5 0 0 0 .5.5H5v.5a.5.5 0 0 0 .5.5H6v-1.5a.5.5 0 0 0-.5-.5H5v-.5a.5.5 0 0 0-.5-.5H3z " />
-            </svg></button></span>
-                <br>
-                <br>
-                <span><button class=" btn btn-secondary btn-sm container-fluid" (click)="Restar(i)"> Restar Cantidad - 1 <svg width="1em "
-                    height="1em " viewBox="0 0 16 16 " class="bi bi-pencil " fill="currentColor "
-                    xmlns="http://www.w3.org/2000/svg ">
-                    <path fillRule="evenodd "
-                    d="M11.293 1.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-9 9a1 1 0 0 1-.39.242l-3 1a1 1 0 0 1-1.266-1.265l1-3a1 1 0 0 1 .242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z " />
-                    <path fillRule="evenodd "
-                    d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 0 0 .5.5H4v.5a.5.5 0 0 0 .5.5H5v.5a.5.5 0 0 0 .5.5H6v-1.5a.5.5 0 0 0-.5-.5H5v-.5a.5.5 0 0 0-.5-.5H3z " />
-                    </svg></button></span>
-                <br>
-                <br>
-                <span><button  class="btn btn-cancel btn-sm container-fluid " (click)="Eliminar(producto,i) "> Eliminar del carrito
-            <svg width="1em "
-            height="1em " viewBox="0 0 16 16 " class="bi bi-x " fill="currentColor "
-            xmlns="http://www.w3.org/2000/svg ">
-            <path fillRule="evenodd "
-            d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z " />
-            <path fillRule="evenodd "
-            d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z " />
-            </svg></button></span></td>
-        </tr>
-
-    </tbody>
-</table>
-<div class="card1">
-    <div class="card">
-        <div class="card-body">
-            Precio total: {{totalIva}}
-        </div>
-    </div>
-</div>
-
-
-
-
-<div class="center ">
-    <button class="btn btn-lg btn-acept btn-block  " type="submit " (click)="Limpiar() "><svg width="0.5em " height="1em " viewBox="0 0 16 16 "
-    class="bi bi-check " fill="currentColor " xmlns="http://www.w3.org/2000/svg ">
-    <path fill-rule="evenodd "
-        d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z " />
-</svg>Borrar todo carrito de compra</button>
-
+<div class="container">
     <div class="row">
-        <div class="col-sm-3" id="paypal-checkout-btn"></div>
+        <table class="table table-pink table-responsive-sm table-responsive-md table-responsive-lg table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let producto  of cart.products,  let i = index">
+                    <td>{{producto.nombre}}</td>
+                    <td>{{producto.precio}}</td>
+                    <td>{{producto.cantidad}}</td>
+                    <td><span><button class=" btn-acept btn-sm container-fluid" (click)="Aumentar(i)"> Aumentar 1 <svg
+                                    width="1em " height="1em " viewBox="0 0 16 16 " class="bi bi-pencil "
+                                    fill="currentColor " xmlns="http://www.w3.org/2000/svg ">
+                                    <path fillRule="evenodd "
+                                        d="M11.293 1.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-9 9a1 1 0 0 1-.39.242l-3 1a1 1 0 0 1-1.266-1.265l1-3a1 1 0 0 1 .242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z " />
+                                    <path fillRule="evenodd "
+                                        d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 0 0 .5.5H4v.5a.5.5 0 0 0 .5.5H5v.5a.5.5 0 0 0 .5.5H6v-1.5a.5.5 0 0 0-.5-.5H5v-.5a.5.5 0 0 0-.5-.5H3z " />
+                                </svg></button></span>
+                        <br>
+                        <br>
+                        <span><button class=" btn btn-seg btn-sm container-fluid" (click)="Restar(i)"> Restar 1
+                                <svg width="1em " height="1em " viewBox="0 0 16 16 " class="bi bi-pencil "
+                                    fill="currentColor " xmlns="http://www.w3.org/2000/svg ">
+                                    <path fillRule="evenodd "
+                                        d="M11.293 1.293a1 1 0 0 1 1.414 0l2 2a1 1 0 0 1 0 1.414l-9 9a1 1 0 0 1-.39.242l-3 1a1 1 0 0 1-1.266-1.265l1-3a1 1 0 0 1 .242-.391l9-9zM12 2l2 2-9 9-3 1 1-3 9-9z " />
+                                    <path fillRule="evenodd "
+                                        d="M12.146 6.354l-2.5-2.5.708-.708 2.5 2.5-.707.708zM3 10v.5a.5.5 0 0 0 .5.5H4v.5a.5.5 0 0 0 .5.5H5v.5a.5.5 0 0 0 .5.5H6v-1.5a.5.5 0 0 0-.5-.5H5v-.5a.5.5 0 0 0-.5-.5H3z " />
+                                </svg></button></span>
+                        <br>
+                        <br>
+                        <span><button class="btn btn-cancel btn-sm container-fluid " (click)="Eliminar(producto,i) ">
+                                Eliminar del carrito
+                                <svg width="1em " height="1em " viewBox="0 0 16 16 " class="bi bi-x "
+                                    fill="currentColor " xmlns="http://www.w3.org/2000/svg ">
+                                    <path fillRule="evenodd "
+                                        d="M11.854 4.146a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708-.708l7-7a.5.5 0 0 1 .708 0z " />
+                                    <path fillRule="evenodd "
+                                        d="M4.146 4.146a.5.5 0 0 0 0 .708l7 7a.5.5 0 0 0 .708-.708l-7-7a.5.5 0 0 0-.708 0z " />
+                                </svg></button></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="container">
+            <div class="row center">
+                <div class="card1 col-md-3">
+                    <div class="card">
+                        <div class="card-body">
+                            Precio total: {{totalIva}}
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5 ">
+                    <button class="btn btn-acept btn-lg btn-block " type="submit " (click)="Limpiar() "><svg
+                            width="2rem " height="1em " viewBox="0 0 16 16 " class="bi bi-check " fill="currentColor "
+                            xmlns="http://www.w3.org/2000/svg ">
+                            <path fill-rule="evenodd "
+                                d="M10.97 4.97a.75.75 0 0 1 1.071 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.236.236 0 0 1 .02-.022z " />
+                        </svg>Borrar todo carrito de compra</button>
+                </div>
+                <div class="col-md-4 ">
+                    <div class="btn btn-seg btn-lg" id="paypal-checkout-btn"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>

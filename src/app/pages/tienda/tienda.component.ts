@@ -9,6 +9,7 @@ import { CrudproductService } from 'src/app/services/crudproduct.service';
 })
 export class TiendaComponent implements OnInit {
   productos:Product[];
+  b;
 
   constructor(private crudp: CrudproductService) { 
     this.crudp.listProducto().subscribe(prod=>{
@@ -19,6 +20,9 @@ export class TiendaComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+  busq(nombre){
+    this.crudp.listProductoB(nombre,this.b);
   }
 
 

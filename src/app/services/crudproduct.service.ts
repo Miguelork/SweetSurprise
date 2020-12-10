@@ -26,12 +26,19 @@ export class CrudproductService {
     return this.productos;
   } 
 
-
+  listProductoB(parametro, valor){
+    this.db.collection<Product>('product').ref.where(parametro,"==",valor).get().then(function(querySanpshot){
+      querySanpshot.forEach(function(doc){
+        console.log(doc.id,"",doc.data());
+      });
+    });
+  }
 
 
   getProducto(id) {
     return this.db.collection('product').doc(id).valueChanges()
   } 
+  
 
   agregarProducto(producto: Product){
     this.productosCollection.add(producto);
