@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { CrudproductService } from 'src/app/services/crudproduct.service';
@@ -10,7 +10,7 @@ import { CrudproductService } from 'src/app/services/crudproduct.service';
 })
 export class ListcardproductComponent implements OnInit {
 
-  productos:Product[];
+  @Input() productos:Product[];
   product:Product={
     nombre:'',
     descripcion:'',
@@ -23,11 +23,8 @@ export class ListcardproductComponent implements OnInit {
     img3:null,
   }
 
-  constructor(private crudp: CrudproductService, private router:Router) {
-    this.crudp.listProducto().subscribe(prod=>{
-      this.productos = prod;
-      console.log(this.productos)
-    })
+  constructor(private router:Router) {
+    
   }
 
   ngOnInit(): void {
