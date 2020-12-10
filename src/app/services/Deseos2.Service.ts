@@ -33,8 +33,8 @@ export class DeseoDos {
   agregarProducto(producto: Deseosmodel){
     this.productosCollection.add(producto);
   }
-  eliminarProducto(producto){
-    this.productoDoc = this.db.doc<Deseosmodel>(`ListaDeseos/${producto.id}`);
+  eliminarProducto(producto: Deseosmodel){
+    this.productoDoc = this.db.doc<Deseosmodel>(`ListaDeseos/${producto.uid}`);
     this.productoDoc.delete();
   }
   editarProducto(producto){
